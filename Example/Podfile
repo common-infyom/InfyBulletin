@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'InfyBulletin_Example' do
+  pod 'InfyBulletin', :path => '../'
+
+  target 'InfyBulletin_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
