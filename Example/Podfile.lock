@@ -1,0 +1,16 @@
+PODS:
+  - InfyBulletin (0.1.0)
+
+DEPENDENCIES:
+  - InfyBulletin (from `../`)
+
+EXTERNAL SOURCES:
+  InfyBulletin:
+    :path: ../
+
+SPEC CHECKSUMS:
+  InfyBulletin: a623767b63e866b212a277ff078f4668e8504e21
+
+PODFILE CHECKSUM: 23a91116cdcc6c3ac5d8e1226dbbf06ee3ba5ff3
+
+COCOAPODS: 1.4.0.beta.2

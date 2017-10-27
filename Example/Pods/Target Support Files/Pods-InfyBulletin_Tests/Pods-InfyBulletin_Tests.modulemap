@@ -1,0 +1,6 @@
+framework module Pods_InfyBulletin_Tests {
+  umbrella header "Pods-InfyBulletin_Tests-umbrella.h"
+
+  export *
+  module * { export * }
+}

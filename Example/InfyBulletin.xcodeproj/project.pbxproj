@@ -7,14 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		46D13467535F79392DEB40FC /* Pods_InfyBulletin_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB007EAABB03B3863EA5B6F4 /* Pods_InfyBulletin_Tests.framework */; };
+		577713EBD3619987D1B451D7 /* Pods_InfyBulletin_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43B52E768183295B1DD03772 /* Pods_InfyBulletin_Example.framework */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
 		607FACD81AFB9204008FA782 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* ViewController.swift */; };
 		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
-		6C85AFD91B0C309747F91262 /* Pods_InfyBulletin_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43B52E768183295B1DD03772 /* Pods_InfyBulletin_Example.framework */; };
+		AB5C5B11F1CABDB6AD137F33 /* Pods_InfyBulletin_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB007EAABB03B3863EA5B6F4 /* Pods_InfyBulletin_Tests.framework */; };
+		E72B3E921FA2FDF800D82E09 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E74BB9601FA20EEB00698D13 /* HomeViewController.xib */; };
+		E74BB9671FA20EEC00698D13 /* creditCardTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E74BB9611FA20EEB00698D13 /* creditCardTableCell.swift */; };
+		E74BB9681FA20EEC00698D13 /* CreditCardNewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E74BB9621FA20EEB00698D13 /* CreditCardNewView.swift */; };
+		E74BB9691FA20EEC00698D13 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E74BB9631FA20EEB00698D13 /* HomeViewController.swift */; };
+		E79C5FCE1FA2FEF800D39FBF /* CreditCardNewView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E74BB9651FA20EEB00698D13 /* CreditCardNewView.xib */; };
+		E79C5FCF1FA2FEFE00D39FBF /* creditCardTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E74BB9641FA20EEB00698D13 /* creditCardTableCell.xib */; };
+		E79C5FD31FA3009500D39FBF /* NewIntroPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E74BB9661FA20EEC00698D13 /* NewIntroPage.swift */; };
+		E79C5FF71FA339D500D39FBF /* FeedbackPageBulletinItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = E79C5FF61FA339D500D39FBF /* FeedbackPageBulletinItem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,7 +37,7 @@
 
 /* Begin PBXFileReference section */
 		361CAAFE279D095CA1C9D3E4 /* Pods-InfyBulletin_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InfyBulletin_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-InfyBulletin_Tests/Pods-InfyBulletin_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		3E395CFA08D0399AB71C651B /* InfyBulletin.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = InfyBulletin.podspec; path = ../InfyBulletin.podspec; sourceTree = "<group>"; };
+		3E395CFA08D0399AB71C651B /* InfyBulletin.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = InfyBulletin.podspec; path = ../InfyBulletin.podspec; sourceTree = "<group>"; };
 		43B52E768183295B1DD03772 /* Pods_InfyBulletin_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InfyBulletin_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		487AF0D5BCBEB06DF71D893D /* Pods-InfyBulletin_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InfyBulletin_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-InfyBulletin_Example/Pods-InfyBulletin_Example.release.xcconfig"; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* InfyBulletin_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InfyBulletin_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -42,11 +50,19 @@
 		607FACE51AFB9204008FA782 /* InfyBulletin_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InfyBulletin_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
-		6B397184F9F64EE54C078179 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
-		776D1DD0746951D3C48157F7 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		6B397184F9F64EE54C078179 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		776D1DD0746951D3C48157F7 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		89415C63205A7E9B9C5BED79 /* Pods-InfyBulletin_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InfyBulletin_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-InfyBulletin_Tests/Pods-InfyBulletin_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		CB007EAABB03B3863EA5B6F4 /* Pods_InfyBulletin_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InfyBulletin_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFE37762FF1FBA53D2739D91 /* Pods-InfyBulletin_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InfyBulletin_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-InfyBulletin_Example/Pods-InfyBulletin_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		E74BB9601FA20EEB00698D13 /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
+		E74BB9611FA20EEB00698D13 /* creditCardTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = creditCardTableCell.swift; sourceTree = "<group>"; };
+		E74BB9621FA20EEB00698D13 /* CreditCardNewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditCardNewView.swift; sourceTree = "<group>"; };
+		E74BB9631FA20EEB00698D13 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		E74BB9641FA20EEB00698D13 /* creditCardTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = creditCardTableCell.xib; sourceTree = "<group>"; };
+		E74BB9651FA20EEB00698D13 /* CreditCardNewView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CreditCardNewView.xib; sourceTree = "<group>"; };
+		E74BB9661FA20EEC00698D13 /* NewIntroPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewIntroPage.swift; sourceTree = "<group>"; };
+		E79C5FF61FA339D500D39FBF /* FeedbackPageBulletinItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackPageBulletinItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,7 +70,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6C85AFD91B0C309747F91262 /* Pods_InfyBulletin_Example.framework in Frameworks */,
+				577713EBD3619987D1B451D7 /* Pods_InfyBulletin_Example.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,7 +78,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				46D13467535F79392DEB40FC /* Pods_InfyBulletin_Tests.framework in Frameworks */,
+				AB5C5B11F1CABDB6AD137F33 /* Pods_InfyBulletin_Tests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -105,6 +121,14 @@
 			isa = PBXGroup;
 			children = (
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
+				E74BB9621FA20EEB00698D13 /* CreditCardNewView.swift */,
+				E74BB9651FA20EEB00698D13 /* CreditCardNewView.xib */,
+				E74BB9611FA20EEB00698D13 /* creditCardTableCell.swift */,
+				E74BB9641FA20EEB00698D13 /* creditCardTableCell.xib */,
+				E74BB9631FA20EEB00698D13 /* HomeViewController.swift */,
+				E74BB9601FA20EEB00698D13 /* HomeViewController.xib */,
+				E74BB9661FA20EEC00698D13 /* NewIntroPage.swift */,
+				E79C5FF61FA339D500D39FBF /* FeedbackPageBulletinItem.swift */,
 				607FACD71AFB9204008FA782 /* ViewController.swift */,
 				607FACD91AFB9204008FA782 /* Main.storyboard */,
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
@@ -215,11 +239,13 @@
 				TargetAttributes = {
 					607FACCF1AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
-						LastSwiftMigration = 0900;
+						DevelopmentTeam = 8UFRE96529;
+						LastSwiftMigration = "";
 					};
 					607FACE41AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
-						LastSwiftMigration = 0900;
+						DevelopmentTeam = 8UFRE96529;
+						LastSwiftMigration = "";
 						TestTargetID = 607FACCF1AFB9204008FA782;
 					};
 				};
@@ -249,8 +275,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */,
+				E79C5FCF1FA2FEFE00D39FBF /* creditCardTableCell.xib in Resources */,
+				E79C5FCE1FA2FEF800D39FBF /* CreditCardNewView.xib in Resources */,
 				607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */,
 				607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */,
+				E72B3E921FA2FDF800D82E09 /* HomeViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -370,7 +399,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E74BB9691FA20EEC00698D13 /* HomeViewController.swift in Sources */,
+				E74BB9681FA20EEC00698D13 /* CreditCardNewView.swift in Sources */,
+				E74BB9671FA20EEC00698D13 /* creditCardTableCell.swift in Sources */,
+				E79C5FF71FA339D500D39FBF /* FeedbackPageBulletinItem.swift in Sources */,
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
+				E79C5FD31FA3009500D39FBF /* NewIntroPage.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -463,6 +497,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
@@ -508,6 +543,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.0;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -517,7 +553,9 @@
 			baseConfigurationReference = CFE37762FF1FBA53D2739D91 /* Pods-InfyBulletin_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 8UFRE96529;
 				INFOPLIST_FILE = InfyBulletin/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
@@ -532,7 +570,9 @@
 			baseConfigurationReference = 487AF0D5BCBEB06DF71D893D /* Pods-InfyBulletin_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 8UFRE96529;
 				INFOPLIST_FILE = InfyBulletin/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
@@ -546,6 +586,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 361CAAFE279D095CA1C9D3E4 /* Pods-InfyBulletin_Tests.debug.xcconfig */;
 			buildSettings = {
+				DEVELOPMENT_TEAM = 8UFRE96529;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -567,6 +608,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 89415C63205A7E9B9C5BED79 /* Pods-InfyBulletin_Tests.release.xcconfig */;
 			buildSettings = {
+				DEVELOPMENT_TEAM = 8UFRE96529;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",

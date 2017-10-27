@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="CreditCardNewView" customModule="InfyBulletin_Example">
+            <rect key="frame" x="0.0" y="0.0" width="264" height="220"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Eha-15-n65">
+                    <rect key="frame" x="0.0" y="0.0" width="264" height="220"/>
+                    <subviews>
+                        <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="gVG-po-x8l">
+                            <rect key="frame" x="0.0" y="0.0" width="264" height="220"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <outlet property="dataSource" destination="-1" id="dzi-ii-a1F"/>
+                                <outlet property="delegate" destination="-1" id="Qg5-mX-cie"/>
+                            </connections>
+                        </tableView>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.13037778253424659" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="gVG-po-x8l" firstAttribute="leading" secondItem="Eha-15-n65" secondAttribute="leading" id="ESM-Cx-VhQ"/>
+                        <constraint firstAttribute="trailing" secondItem="gVG-po-x8l" secondAttribute="trailing" id="TWp-Xz-rjD"/>
+                        <constraint firstItem="gVG-po-x8l" firstAttribute="top" secondItem="Eha-15-n65" secondAttribute="top" id="bpU-qu-H6J"/>
+                        <constraint firstAttribute="bottom" secondItem="gVG-po-x8l" secondAttribute="bottom" id="d1Y-R3-WsY"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="Eha-15-n65" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="8r1-5E-5od"/>
+                <constraint firstItem="Eha-15-n65" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="CNR-BD-dEM"/>
+                <constraint firstItem="Eha-15-n65" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="jHH-RS-U0a"/>
+                <constraint firstItem="Eha-15-n65" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="s1A-qk-mdt"/>
+                <constraint firstItem="Eha-15-n65" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="taV-wr-M8W"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="tableView" destination="gVG-po-x8l" id="Wfi-Up-x9h"/>
+            </connections>
+            <point key="canvasLocation" x="-29" y="276"/>
+        </view>
+    </objects>
+</document>

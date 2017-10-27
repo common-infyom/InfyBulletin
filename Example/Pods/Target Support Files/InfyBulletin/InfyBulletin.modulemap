@@ -1,0 +1,6 @@
+framework module InfyBulletin {
+  umbrella header "InfyBulletin-umbrella.h"
+
+  export *
+  module * { export * }
+}
