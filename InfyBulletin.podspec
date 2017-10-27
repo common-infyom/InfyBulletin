@@ -24,7 +24,7 @@ DESC
 s.homepage         = 'https://github.com/common-infyom/InfyBulletin'
 # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
 s.license          = { :type => 'MIT', :file => 'LICENSE' }
-s.author           = { 'infyom' => 'common.infyom@gmail.com' }
+s.author           = { 'common-infyom' => 'common.infyom@gmail.com' }
 s.source           = { :git => 'https://github.com/common-infyom/InfyBulletin.git', :tag => s.version.to_s }
 # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
