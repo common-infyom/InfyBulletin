@@ -16,7 +16,8 @@ import UIKit
  * and `alternativeButtonTapped(sender:)` to handle tap events. Make sure to call `super` if you do.
  */
 
- class PageBulletinItem: ListItem{
+@available(iOS 9.0, *)
+open class PageBulletinItem: ListItem{
     
     // MARK: Initialization
     
@@ -101,7 +102,7 @@ import UIKit
      * Use this property to customize the appearance of the generated elements.
      */
     
-     let interfaceFactory = ListInterfaceFactory()
+     public var interfaceFactory = ListInterfaceFactory()
     
     /**
      * Whether the description text should be displayed with a smaller font.
@@ -160,8 +161,8 @@ import UIKit
      * This is an implementation detail of `BulletinItem` and you should not call it directly.
      */
     
-    @available(iOS 11.0, *)
-    public func makeArrangedSubviews() -> [UIView] {
+    
+   public func makeArrangedSubviews() -> [UIView] {
         
         var arrangedSubviews = [UIView]()
         
@@ -193,18 +194,22 @@ import UIKit
         }
         else{
             
-            let tempview = interfaceFactory.makeTableData(colorOne: tableLableColor, colorTwo: tableBackButtonColor)
+            if #available(iOS 11.0, *) {
+                let tempView = interfaceFactory.makeTableData(colorOne: tableLableColor, colorTwo: tableBackButtonColor)
+                let heightContraints = NSLayoutConstraint(item: tempView, attribute: .height, relatedBy: .equal, toItem: nil, attribute: NSLayoutAttribute.notAnAttribute, multiplier: 1.0, constant: 200)
+                let widthContraints = NSLayoutConstraint(item: tempView, attribute:
+                    .width, relatedBy: .equal, toItem: nil,
+                            attribute: NSLayoutAttribute.notAnAttribute, multiplier: 1.0,
+                            constant: 70)
+                tempView.addConstraints([widthContraints, heightContraints])
+                
+                print(tempView.frame)
+
+                arrangedSubviews.append(tempView)
+            }
             
-            let heightContraints = NSLayoutConstraint(item: tempview, attribute: .height, relatedBy: .equal, toItem: nil, attribute: NSLayoutAttribute.notAnAttribute, multiplier: 1.0, constant: 200)
-            let widthContraints = NSLayoutConstraint(item: tempview, attribute:
-                .width, relatedBy: .equal, toItem: nil,
-                        attribute: NSLayoutAttribute.notAnAttribute, multiplier: 1.0,
-                        constant: 70)
-            tempview.addConstraints([widthContraints, heightContraints])
-
-            print(tempview.frame)
-
-            arrangedSubviews.append(tempview)
+            
+           
         }
 
         

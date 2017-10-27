@@ -37,7 +37,6 @@ class LoadTableView: UIView ,UITableViewDataSource ,UITableViewDelegate ,UIGestu
         let tapLocation = recognizer.location(in: self.tableView)
         if let tapIndexPath = tableView.indexPathForRow(at: tapLocation) {
             if self.tableView.cellForRow(at: tapIndexPath) != nil {
-                    // Swipe happened. Do stuff!
                 print("You selected cell #\(tapIndexPath.row)!")
                 
                 let segueView = tableViewSegue()
@@ -49,7 +48,7 @@ class LoadTableView: UIView ,UITableViewDataSource ,UITableViewDelegate ,UIGestu
                 segueView.frame = CGRect(x: 0, y: 0, width: self.frame.width, height: self.frame.height)
                 segueView.setContantView()
 //                segueView.center = self.center
-//                segueView.backgroundColor = UIColor.darkGray
+                //segueView.backgroundColor = UIColor.darkGray
                 self.addSubview(segueView)
                 }
             }

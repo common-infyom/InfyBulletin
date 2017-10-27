@@ -79,21 +79,29 @@ public class ListInterfaceFactory  {
         titleLabel.numberOfLines = 1
         titleLabel.adjustsFontSizeToFitWidth = true
         
-        titleLabel.font = UIFont.systemFont(ofSize: titleFontSize, weight: UIFontWeightMedium)
+        if #available(iOS 8.2, *) {
+            titleLabel.font = UIFont.systemFont(ofSize: titleFontSize, weight: UIFontWeightMedium)
+        } else {
+            // Fallback on earlier versions
+        }
         
         return titleLabel
         
     }
-    
-    public func makeTableData(colorOne : UIColor ,  colorTwo : UIColor) -> UIView{
+     @available(iOS 11.0, *)
+     func makeTableData(colorOne : UIColor ,  colorTwo : UIColor) -> UIView{
         
-        let tableView = LoadTableView()
-//        if tableView.tableButtonC == nil && tableView.tableLabelC == nil{
-            tableView.tableLabelC = colorOne
-            tableView.tableButtonC = colorTwo
-//        }
+        
+            let tableView = LoadTableView()
+//            if tableView.tableButtonC == nil && tableView.tableLabelC == nil{
+                tableView.tableLabelC = colorOne
+                tableView.tableButtonC = colorTwo
+                //        }
+                
+        //}
         tableView.frame = CGRect(x: 0, y: 0, width: 200, height: 400)
         tableView.setContantView()
+
         return tableView
     }
    
@@ -103,7 +111,7 @@ public class ListInterfaceFactory  {
      * - parameter isCompact: If `true`, a smaller font size will be used.
      */
     
-    public func makeDescriptionLabel(isCompact: Bool) -> UILabel {
+     func makeDescriptionLabel(isCompact: Bool) -> UILabel {
         
         let descriptionLabel = UILabel()
         descriptionLabel.textAlignment = .center
@@ -116,7 +124,7 @@ public class ListInterfaceFactory  {
         return descriptionLabel
         
     }
-    public func makeTempView(isCompact : Bool) -> UIView{
+     func makeTempView(isCompact : Bool) -> UIView{
         let tempView = UIView()
         tempView.frame = CGRect(x: 0, y: 0, width: 200, height: 400)
         tempView.backgroundColor = UIColor.clear
@@ -133,7 +141,7 @@ public class ListInterfaceFactory  {
      * - parameter title: The title of the button.
      */
     
-    public func makeActionButton(title: String) -> ListContainerView<HighlightButton> {
+     func makeActionButton(title: String) -> ListContainerView<HighlightButton> {
         
         let actionButton = HighlightButton(type: .custom)
         if actionButton.backgroundColor == nil{
@@ -144,13 +152,21 @@ public class ListInterfaceFactory  {
         actionButton.autoresizingMask = .flexibleWidth
         
         actionButton.setTitle(title, for: .normal)
-        actionButton.titleLabel?.font = UIFont.systemFont(ofSize: actionButtonFontSize, weight: UIFontWeightSemibold)
+        if #available(iOS 8.2, *) {
+            actionButton.titleLabel?.font = UIFont.systemFont(ofSize: actionButtonFontSize, weight: UIFontWeightSemibold)
+        } else {
+            // Fallback on earlier versions
+        }
         
         actionButton.layer.cornerRadius = 12
         actionButton.clipsToBounds = true
         
         let actionContainer = ListContainerView<HighlightButton>(actionButton)
-        actionContainer.heightAnchor.constraint(equalToConstant: 55).isActive = true
+        if #available(iOS 9.0, *) {
+            actionContainer.heightAnchor.constraint(equalToConstant: 55).isActive = true
+        } else {
+            // Fallback on earlier versions
+        }
         
         return actionContainer
         
@@ -164,7 +180,7 @@ public class ListInterfaceFactory  {
      * - parameter title: The title of the button.
      */
     
-    public func makeAlternativeButton(title: String) -> UIButton {
+     func makeAlternativeButton(title: String) -> UIButton {
         
         let alternativeButton = UIButton(type: .custom)
         if alternativeButton.backgroundColor == nil{
@@ -183,13 +199,17 @@ public class ListInterfaceFactory  {
      * - parameter spacing: The spacing between elements. Defaults to `10`.
      */
     
-    public func makeGroupStack(spacing: CGFloat = 10) -> UIStackView {
+    @available(iOS 9.0, *)
+     func makeGroupStack(spacing: CGFloat = 10) -> UIStackView {
         
-        let buttonsStack = UIStackView()
-        buttonsStack.axis = .vertical
-        buttonsStack.alignment = .fill
-        buttonsStack.distribution = .fill
-        buttonsStack.spacing = spacing
+       
+            var buttonsStack = UIStackView()
+            buttonsStack.axis = .vertical
+            buttonsStack.alignment = .fill
+            buttonsStack.distribution = .fill
+            buttonsStack.spacing = spacing
+  
+       
         
         return buttonsStack
         
@@ -200,7 +220,9 @@ public class ListInterfaceFactory  {
 // MARK: - Swift Compatibility
 
 #if swift(>=4.0)
+    @available(iOS 8.2, *)
     private let UIFontWeightMedium = UIFont.Weight.medium
+    @available(iOS 8.2, *)
     private let UIFontWeightSemibold = UIFont.Weight.semibold
 #endif
 

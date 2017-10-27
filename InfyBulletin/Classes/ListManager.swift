@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+@available(iOS 9.0, *)
 public final class ListManager: NSObject, UIViewControllerTransitioningDelegate {
     
     /// The view controller displaying the bulletin.

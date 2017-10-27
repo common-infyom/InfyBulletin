@@ -11,6 +11,7 @@ import UIKit
 
 public protocol ListItem: class {
     
+    @available(iOS 9.0, *)
     var manager: ListManager? { get set }
     
     var isDismissable: Bool { get set }
@@ -34,7 +35,11 @@ extension ListItem{
             return
         }
         
-        manager?.push(item: nextItem)
+        if #available(iOS 9.0, *) {
+            manager?.push(item: nextItem)
+        } else {
+            // Fallback on earlier versions
+        }
         
     }
     

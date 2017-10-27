@@ -9,6 +9,7 @@
 import Foundation
 import UIKit
 
+@available(iOS 9.0, *)
 final class ListViewController: UIViewController, UIGestureRecognizerDelegate {
     
     /**
@@ -200,7 +201,7 @@ final class ListViewController: UIViewController, UIGestureRecognizerDelegate {
         default:
             contentLeadingConstraint.constant = 24
             contentTrailingConstraint.constant = -24
-            contentBottomConstraint.constant = -16
+            contentBottomConstraint.constant = -24
             
             contentStackView.spacing = 24
             

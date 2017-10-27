@@ -41,10 +41,42 @@ public class ListContainerView<V>: UIView where V: UIView {
         
         contentView.translatesAutoresizingMaskIntoConstraints = false
         
-        topConstraint = contentView.topAnchor.constraint(equalTo: topAnchor)
-        bottomConstraint = contentView.bottomAnchor.constraint(equalTo: bottomAnchor)
-        leftConstraint = contentView.leftAnchor.constraint(equalTo: leftAnchor)
-        rightConstraint = contentView.rightAnchor.constraint(equalTo: rightAnchor)
+        if #available(iOS 9.0, *) {
+            topConstraint = contentView.topAnchor.constraint(equalTo: topAnchor)
+        } else {
+            // Fallback on earlier versions
+        };if #available(iOS 9.0, *) {
+            topConstraint = contentView.topAnchor.constraint(equalTo: topAnchor)
+        } else {
+            // Fallback on earlier versions
+        }
+        if #available(iOS 9.0, *) {
+            bottomConstraint = contentView.bottomAnchor.constraint(equalTo: bottomAnchor)
+        } else {
+            // Fallback on earlier versions
+        };if #available(iOS 9.0, *) {
+            bottomConstraint = contentView.bottomAnchor.constraint(equalTo: bottomAnchor)
+        } else {
+            // Fallback on earlier versions
+        }
+        if #available(iOS 9.0, *) {
+            leftConstraint = contentView.leftAnchor.constraint(equalTo: leftAnchor)
+        } else {
+            // Fallback on earlier versions
+        };if #available(iOS 9.0, *) {
+            leftConstraint = contentView.leftAnchor.constraint(equalTo: leftAnchor)
+        } else {
+            // Fallback on earlier versions
+        }
+        if #available(iOS 9.0, *) {
+            rightConstraint = contentView.rightAnchor.constraint(equalTo: rightAnchor)
+        } else {
+            // Fallback on earlier versions
+        };if #available(iOS 9.0, *) {
+            rightConstraint = contentView.rightAnchor.constraint(equalTo: rightAnchor)
+        } else {
+            // Fallback on earlier versions
+        }
         
         topConstraint.isActive = true
         bottomConstraint.isActive = true
